@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-image: url("study.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* main box*/
+.countdown {
+  width: 600px;
+  padding: 10px;
+  background-color: #53336ec4;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+h2 {
+  font-size: 40px;
+  background-color: transparent;
+  text-align: center;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+/* time boxes*/
+#main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#main div {
+  background-color: #49126d;
+  border: 3px black;
+  width: 120px;
+  padding: 30px;
+}
+
+span {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+h3 {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meme {
+  display: none;
+  width: 200px;
+  height: 200px;
+}
+/*hand drawn star animation*/
+@keyframes glow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.star-pic-div {
+  position: absolute;
+  left: 450px;
+  bottom: 100px;
+  justify-content: flex-start;
+  animation-name: glow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.star-pic {
+  width: 150px;
+  height: 200px;
+}
+
+.star-pic-div2 {
+  position: absolute;
+  right: 450px;
+  bottom: 100px;
+  transform: scaleX(-1);
+  justify-content: flex-start;
+  animation-name: glow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+/* blinking seconds animation */
+@keyframes timer {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#seconds {
+  animation-name: timer;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
